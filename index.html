@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<title>History</title>
+<button class="tab" onclick="switchview('home')">Home</button>
+<button class="tab" onclick="switchview('blackdeath')">Black Death</button>
+<button class="tab" onclick="switchview('medivaleurope')">Medival Europe</button>
+<button class="tab" onclick="switchview('notablepeople')">Notable People</button>
+<style>
+    @font-face {
+        font-family: gerson;
+        src: url(old_london/OldLondon.ttf);
+        font-weight: 400;
+    }
+    body {
+        text-align: center;
+    }
+
+    .info {
+        max-width:450px;
+        width:450px;
+        position: absolute;
+        transform: translateX(calc(50vw - (450px/2)));
+    }
+
+    .tab {
+        width:calc(250px);
+        height: 50px;
+        border-radius: 14%;
+        margin-left: 14px;
+        margin-right: 14px;
+    }
+
+    
+    h1 {
+        font-family: gerson; /*Im old!*/
+    }
+
+    h2 {
+        font-family: gerson; /*Im old!*/
+    }
+
+    p {
+        font-family: gerson; /*Im old!*/
+        font-size: large;
+    }
+</style>
+<div class="info"id="home">
+    <h1>Home</h1>
+    <p>This website is an informational website about the medival period. Enjoy!</p>
+</div>
+<div class="info"id="blackdeath">
+    <h1>The Black Death</h1>
+    <p>The black death was the most dangerous disease in all of history. It peaked around 1347 and killed over 33% of the European population. There are 3 vedrsions of this plague</p>
+
+    <h2>Bubonic</h2>
+    <p>The Bubonic plague consists of several symptoms such as swelling and severe headaches. Then the person will see black "buboes" which will explode.</p>
+
+    <h2>Septicemic</h2>
+    <p>Infects the bloodstream, being able to cause internal bleeding and darken tissue, hence the name "Black Death"</p>
+
+    <h2>Pneumonic</h2>
+    <p>Infects the lungs, spreading through the air through what would be "miasma". The person will then cough bloody mucus.</p>
+</div>
+<div class="info" id="medivaleurope">
+    <h1>The Medival Times</h1>
+    <p>The medival times was a time in history that lasted around 1000 years, it is the time of the falling of the roman empire and the transition to the modern era.</p>
+</div>
+<div class="info" id="notablepeople">
+    <h1>Notable People</h1>
+    <h2>Giovanni Boccaccio</h2>
+    <p>He was an Italian writer who survived the Black Death in 1348 and wrote The Decameron. He is famous for describing what life was like during the plague.</p>
+    <br>
+    <h2>Plague Doctors</h2>
+    <p>These were doctors that had the long beaks for their mask. They had these long beaks so they could hide herbs and flowers.</p>
+
+</div>
+
+
+<script>
+    const tabs = ["home","blackdeath","medivaleurope", "notablepeople"]
+
+    switchview("home")
+    function switchview(tab) {
+        for (i in tabs) {
+            if (tabs[i] == tab) {
+                document.getElementById(tabs[i]).style.visibility = "visible"
+            }
+            else {
+                document.getElementById(tabs[i]).style.visibility = "hidden"
+            }
+        }
+    }
+
+</script>
